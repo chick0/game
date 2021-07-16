@@ -1,7 +1,15 @@
+
+from app import command
+
+
 def choice(list_of_choice):
     def get_index(prompt: str = ""):
         try:
-            tmp = int(input(prompt)) - 1
+            tmp = input(prompt)
+            if tmp in command.__command__.keys():
+                command.__command__[tmp]()
+
+            tmp = int(tmp) - 1
 
             if 0 <= tmp <= len(list_of_choice) - 1:
                 return tmp
