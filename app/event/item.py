@@ -1,8 +1,14 @@
+
+from app import VALUE
+
+
 def get(item_name):
-    # TODO: 인벤토리에 아이템 추가
     for this in item_name:
         print(f"+1 {this}")
-    return
+        try:
+            VALUE['items'][this] += 1
+        except KeyError:
+            VALUE['items'][this] = 1
 
 
 def use(item_name):
