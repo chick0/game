@@ -5,13 +5,17 @@ from json import loads
 from . import BASE_PATH
 
 
+def get_title(name):
+    return open(path.join(BASE_PATH, "story", f"{name}.txt"), mode="r", encoding="utf-8").read().strip()
+
+
 def get_story_list():
     return [story for story in listdir(path.join(BASE_PATH, "story"))
             if story.endswith(".json")]
 
 
 def get_playable_story_list():
-    return [story for story in listdir(path.join(BASE_PATH, "story"))
+    return [story.replace(".json", "") for story in listdir(path.join(BASE_PATH, "story"))
             if story.endswith(".json") and not story.endswith(".item.json")]
 
 
