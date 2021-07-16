@@ -22,6 +22,16 @@
         "3be00c90-4b9c-4d22-b813-449cea245057": {
             "name": "1층 주방",
             "message": [
+                {
+                    "type": "flag.check",
+                    "key": "3be00c90-4b9c-4d22-b813-449cea245057",
+                    "pass_value": null
+                },
+                {
+                    "type": "flag.update",
+                    "key": "3be00c90-4b9c-4d22-b813-449cea245057",
+                    "value": true
+                },
                 "주방에서 1곳을 조사할 수 있다.",
                 {
                     "type": "player.choice",
@@ -76,6 +86,16 @@
         "2bb3dc62-6071-4321-8874-b032092e7812": {
             "name": "2층 내방",
             "message": [
+                                {
+                    "type": "flag.check",
+                    "key": "2bb3dc62-6071-4321-8874-b032092e7812",
+                    "pass_value": null
+                },
+                {
+                    "type": "flag.update",
+                    "key": "2bb3dc62-6071-4321-8874-b032092e7812",
+                    "value": true
+                },
                 "내방에서 1곳을 조사할 수 있다.",
                 {
                     "type": "player.choice",
