@@ -13,9 +13,49 @@
                 {
                     "type": "player.choice",
                     "event_id": [
+                        "0f1d41da-8045-4fc7-a30a-fc2f24c24868",
                         "3be00c90-4b9c-4d22-b813-449cea245057",
                         "2bb3dc62-6071-4321-8874-b032092e7812"
                     ]
+                }
+            ]
+        },
+        "0f1d41da-8045-4fc7-a30a-fc2f24c24868": {
+            "name": "1층 화장실",
+            "message": [
+                {
+                    "type": "flag.check",
+                    "key": "0f1d41da-8045-4fc7-a30a-fc2f24c24868",
+                    "pass_value": null
+                },
+                {
+                    "type": "flag.update",
+                    "key": "0f1d41da-8045-4fc7-a30a-fc2f24c24868",
+                    "value": true
+                },
+                "화장실에서 1곳을 조사할 수 있다.",
+                {
+                    "type": "player.choice",
+                    "event": {
+                        "수납장": {
+                            "type": "item.get",
+                            "message": [
+                                "다른 화장품 없이 오직 로션만 덩그러니 놓여있다."
+                            ],
+                            "item": [
+                                "로션"
+                            ]
+                        },
+                        "욕조": {
+                            "type": "item.get",
+                            "message": [
+                                "목욕용 오리 인형을 발견했다."
+                            ],
+                            "item": [
+                                "인형"
+                            ]
+                        }
+                    }
                 }
             ]
         },
