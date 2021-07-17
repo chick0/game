@@ -1,5 +1,5 @@
 
-from app import FLAG
+from nuclear import FLAG
 
 
 def get(key):

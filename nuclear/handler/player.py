@@ -1,5 +1,5 @@
 
-from app import command
+from nuclear import command
 
 
 def choice(list_of_choice):

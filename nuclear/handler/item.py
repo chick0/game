@@ -1,8 +1,8 @@
 
-from app import VALUE
+from nuclear import VALUE
 
 
-def get(item_name):
+def get(item_name: list):
     for this in item_name:
         print(f"+1 {this}")
         try:
