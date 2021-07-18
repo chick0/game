@@ -13,7 +13,6 @@ def start():
 
     for text in [
         "평펌한 거리 2번가가 당신을 환영합니다.",
-        ""
     ]:
         print_message(text=text)
 
