@@ -9,9 +9,9 @@ def print_title(title: str):
 
 
 def print_message(text: str):
-    print("   ", text)
+    print("  ", text)
 
     text_id = sha1(text.encode()).hexdigest()
     if not VALUE['event'].get(text_id, None):
         VALUE['event'][text_id] = True
-        sleep(0.35)
+        sleep(0.65)
