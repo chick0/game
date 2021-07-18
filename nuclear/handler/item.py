@@ -11,13 +11,9 @@ def get(item_name: list):
             VALUE['items'][this] = 1
 
 
-def use(item_name):
-    # TODO: 인벤토리에 아이템 삭제
-    for this in item_name:
+def use(item_name: str) -> bool:
+    if item_name in VALUE['items'].keys():
         print(f"-1 {item_name}")
-    return
+        return True
 
-
-def need(item_name_list):
-    # TODO: 모든 아이템이 인벤토리에 있는지 확인
-    return
+    return False
