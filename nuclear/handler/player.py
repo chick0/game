@@ -4,17 +4,17 @@ from nuclear import command
 
 def choice(list_of_choice):
     def get_index(prompt: str = ""):
+        tmp = input(prompt).strip()
         try:
-            tmp = input(prompt)
-            if tmp in command.__command__.keys():
-                command.__command__[tmp]()
-
             tmp = int(tmp) - 1
 
             if 0 <= tmp <= len(list_of_choice) - 1:
                 return tmp
         except (ValueError, IndexError):
-            pass
+            if tmp in command.__command__.keys():
+                command.__command__[tmp]()
+            else:
+                print("알 수 없는 명령어 입니다. 'help' 명령어를 사용해 사용할 수 있는 명령어를 확인하세요.")
 
         return get_index(prompt)
 
