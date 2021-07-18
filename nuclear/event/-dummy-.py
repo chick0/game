@@ -9,4 +9,5 @@ event_id = __name__
 
 
 def start():
+    print_title(title=title)
     return None
