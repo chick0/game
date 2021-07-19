@@ -1,10 +1,11 @@
 
-from . import FLAG
-from . import VALUE
+from . import AUTHOR
+from . import TITLE
 from .handler import *
 
 
 def start():
+    print(f"{AUTHOR}'s '{TITLE}'")
     start_event_id = [
         'little_house'
     ]
