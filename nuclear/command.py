@@ -55,7 +55,9 @@ def save():
             "flag": FLAG,
             "value": VALUE
         },
-        fp=open(path.join(path.dirname(path.dirname(__file__)), filename), mode="w", encoding="utf8")
+        fp=open(path.join(path.dirname(path.dirname(__file__)), filename), mode="w", encoding="utf8"),
+        indent=4,
+        ensure_ascii=False
     )
     print(f"** 게임이 저장되었습니다 : {filename} **")
 
