@@ -22,3 +22,15 @@ def choice(list_of_choice):
         print(f"[{i+1}] : {x}")
 
     return list_of_choice[get_index(">>> ")]
+
+
+def dead():
+    from sys import exit
+    print("[플레이어가 죽었습니다]")
+
+    from ..command import show_inventory
+    show_inventory()
+
+    # TODO: 도전과제
+
+    exit(0)
