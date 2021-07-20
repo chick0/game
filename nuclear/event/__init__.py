@@ -13,5 +13,5 @@ def print_message(text: str):
 
     text_id = sha1(text.encode()).hexdigest()
     if not VALUE['event'].get(text_id, None):
-        VALUE['event'][text_id] = True
+        VALUE['event'][text_id] = len(text)
         sleep(0.65)
