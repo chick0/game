@@ -4,7 +4,7 @@ from nuclear.handler import *
 
 
 # metadata
-title = "지하철 : [2]번가 역"
+title = "지하철 : (2)번가 역"
 event_id = __name__
 
 
