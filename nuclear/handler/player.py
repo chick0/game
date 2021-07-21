@@ -28,8 +28,7 @@ def dead():
     from sys import exit
     print("[플레이어가 죽었습니다]")
 
-    from ..command import show_inventory
-    show_inventory()
+    command.show_inventory()
 
     # TODO:점수 표시하기
 
