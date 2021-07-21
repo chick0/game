@@ -31,6 +31,6 @@ def dead():
     from ..command import show_inventory
     show_inventory()
 
-    # TODO: 도전과제
+    # TODO:점수 표시하기
 
     exit(0)
