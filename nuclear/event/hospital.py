@@ -4,21 +4,36 @@ from nuclear.handler import *
 
 
 # metadata
-title = "병원"
+title = "병원 복도"
 event_id = __name__
+
+
+def goto_street():
+    for text in [
+        "당신이 병원을 나가는 순간 병원에 공급되는 전기가 끊어졌습니다.",
+    ]:
+        print_message(text=text)
+
+    flag.update(event_id, True)
+    return "street_no2"
 
 
 def start():
     print_title(title=title)
 
-    # TODO:1층               hospital_1f
-    # TODO:1층 안내데스크    hospital_1f_info
-    # TODO:1층 화장실        hospital_1f_bathroom
-    # TODO:1층 약국          hospital_1f_pharmacy
+    for text in [
+        "낡은건지 최신식인지 알 수 없는 병원에 도착했습니다.",
+        "지금 생각해보니 이 병원이 넓은건지 좁은건지 알 수 없습니다."
+    ]:
+        print_message(text=text)
 
-    # TODO:2층               hospital_2f
-    # TODO:2층 원장실        hospital_2f_doctor
-    # TODO:2층 진료실        hospital_2f_doctor_office
-    # TODO:2층 입원실 A      hospital_2f_ward_a
-    # TODO:2층 입원실 B      hospital_2f_ward_b
-    return None
+    ev_map = {
+        "병원 1층으로 들어가기": event.get("hospital_1f"),
+        "2번가로 돌아가기": goto_street,
+    }
+
+    next_event_id = ev_map[player.choice(list(ev_map.keys()))]()
+    if next_event_id is None:
+        start()
+    else:
+        event.get(next_event_id)()
