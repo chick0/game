@@ -26,10 +26,24 @@ def choice(list_of_choice):
 
 def dead():
     from sys import exit
-    print("[플레이어가 죽었습니다]")
+    from .. import VALUE
+    from ..items import items
+    from ..event import print_title
+    from ..event import print_message
 
-    command.show_inventory()
+    print_title(title="플레이어가 죽었습니다")
 
-    # TODO:점수 표시하기
+    event_score = len(VALUE['event'].keys())
+    item_score = 0
+    for n, i in VALUE['items'].items():
+        item_score += items[n]['score'] * i
+
+    print_title(title="플레이어의 점수")
+    for text in [
+        f"이벤트 점수 : {event_score}",
+        f"아이템 점수 : {item_score}",
+        f"= 종합 점수 : {event_score + item_score}"
+    ]:
+        print_message(text=text, no_wait=True)
 
     exit(0)
