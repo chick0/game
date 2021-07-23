@@ -9,3 +9,6 @@ VALUE = {
     'items': {},
     'event': {}
 }
+
+# timer setting
+MAX_TIME = 2700  # seconds

@@ -9,6 +9,7 @@ event_id = __name__
 
 
 def start():
+    timer.check()
     print_title(title=title)
 
     for text in [
