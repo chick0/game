@@ -38,7 +38,7 @@ def start():
     print_title(title=title)
     for text in [
         "주방 구석에 조그만한 불씨가 보입니다.",
-        "여러 곳을 조사하기에는 시간이 부족해보인다."
+        "여러 곳을 조사하기에는 시간이 부족해보입니다."
     ]:
         print_message(text=text)
 
