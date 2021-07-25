@@ -4,7 +4,7 @@ from nuclear.handler import *
 
 
 # metadata
-title = "병원 복도"
+title = "병원 정문"
 event_id = __name__
 
 
@@ -28,7 +28,7 @@ def start():
         print_message(text=text)
 
     ev_map = {
-        "병원 1층으로 들어가기": event.get("hospital_1f"),
+        "복도로 들어가기": event.get("hospital_1f"),
         "2번가로 돌아가기": goto_street,
     }
 
