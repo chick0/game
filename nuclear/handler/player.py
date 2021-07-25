@@ -43,12 +43,12 @@ def dead():
 
     command.show_inventory()
 
-    print_title(title="플레이어의 점수")
+    print_title(title="플레이어의 점수", no_warp=True)
     for text in [
         f"이벤트 점수 : {event_score}",
         f"아이템 점수 : {item_score}",
-        f"  남은 시간 : {time_score}",
-        f"= 종합 점수 : {event_score + item_score + time_score}"
+        f"  남은 시간 : {time_score} + [사망 패널티 1/2배]",
+        f"= 종합 점수 : {event_score + item_score + (time_score / 2)}"
     ]:
         print_message(text=text, no_wait=True)
 
